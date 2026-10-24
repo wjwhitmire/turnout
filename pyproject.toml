@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fieldservice"
+version = "0.1.0"
+description = "Local-first field service office: clients, quotes, jobs, schedule, crews, invoices and reports in integer cents."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Will Whitmire" }]
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Office/Business :: Scheduling",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+fieldservice = "fieldservice.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

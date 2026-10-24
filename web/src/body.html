@@ -1,0 +1,34 @@
+<div class="app">
+<nav class="nav" id="nav" aria-label="Main"></nav>
+<div class="scrim" id="scrim" hidden></div>
+<div class="work">
+<header class="topbar">
+  <button class="iconbtn only-phone" type="button" id="menu-btn" aria-controls="nav" aria-expanded="false" aria-label="Menu"></button>
+  <div class="biz"><b id="biz"></b><span class="badge-ex only-wide" id="example-flag" hidden>Example data</span></div>
+  <div class="search only-wide" id="search-box"></div>
+  <button type="button" class="btn primary" id="create-btn" aria-keyshortcuts="n" aria-haspopup="menu"></button>
+  <button class="iconbtn only-wide" type="button" id="theme-btn" aria-label="Switch light or dark"></button>
+  <button class="iconbtn only-wide" type="button" id="help-btn" aria-label="Method and limits"></button>
+</header>
+<div class="exstrip only-narrow" id="exstrip" hidden></div>
+<main class="main" id="main" tabindex="-1"></main>
+<footer class="foot">
+  <p>Built by Will Whitmire. Runs entirely in your browser; nothing you enter is uploaded.</p>
+  <p class="maker">W. Whitmire / Field Tools / No. 17</p>
+  <details id="method">
+    <summary>Method and limits</summary>
+    <ul class="muted">
+      <li>Money is whole cents. Line amount = quantity x rate, rounded half away from zero; a percent discount is shared across lines by the largest remainder method; tax is rounded once per document or once per line, as you choose. Optional quote lines count only when the client chooses them.</li>
+      <li>Schedules use calendar dates and wall-clock times with no time zone, so an 8:00 AM weekly visit stays at 8:00 across daylight saving changes. Monthly visits on a day past the month's end fall on its last day (the 31st is February 28 or 29). Weeks run Monday to Sunday; every N weeks counts from the week of the start date.</li>
+      <li>Worked time comes from start and finish stamps that carry your device's UTC offset, so a shift across a clock change is counted exactly.</li>
+      <li>Route order is a nearest-neighbour suggestion over straight-line distances between the coordinates you enter. It is not a driving route and ignores roads and traffic. No map service is used.</li>
+      <li>Job costing: labor is minutes x each crew member's hourly cost, rounded per entry; materials are expense quantity x unit cost; revenue is invoiced amounts before tax, or the job's line items before it is invoiced. Utilization is job hours / (weekly hours x days / 7).</li>
+      <li>Automatic steps run when you change something and when the app opens. Each one is logged with the reason and can be undone while the records it touched are unchanged; after 60 days only the summary is kept.</li>
+      <li>Nothing is sent for you: reminders open as drafts in your own email or messages app. Payment links point to your own processor; card data never touches this app.</li>
+      <li>Data lives in this browser on this device. Crews work from packet files; there is no live sync. Save backups.</li>
+    </ul>
+  </details>
+</footer>
+</div>
+</div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
